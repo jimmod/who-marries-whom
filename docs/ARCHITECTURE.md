@@ -1,6 +1,6 @@
 # Architecture and code guide
 
-This is the technical handoff for agents working on **Who married who? — Canada**. Read [METHODOLOGY.md](METHODOLOGY.md) before changing calculations or the included population.
+This is the technical handoff for agents working on **Who married whom? — Canada**. Read [METHODOLOGY.md](METHODOLOGY.md) before changing calculations or the included population.
 
 ## Current product and boundaries
 
@@ -11,7 +11,7 @@ A single-page, static React application explores the occupation and gender of sp
 - A connection diagram, ranked list, full table with uncertainty ranges, coverage explanation, and methodology.
 - No backend, database, API credentials, authentication, routing library, or runtime StatCan requests.
 - **The second, detailed occupation selector has not been implemented.** The earlier request was interrupted for clarification. The current source has no detailed job-to-job spouse counts. See [DETAILED-OCCUPATION-REQUEST.md](DETAILED-OCCUPATION-REQUEST.md).
-- No deployment or remote Git repository was created as part of the initial implementation. Inspect the current Git configuration before assuming that remains true.
+- GitHub remote: `git@github.com:jimmod/who-marries-whom.git`; branch `main`. The development history has been pushed. No website deployment was performed. Inspect `git status` and remotes before assuming local changes are published.
 
 ## System diagram
 
@@ -68,6 +68,14 @@ The diagram and ranking use the first six reportable rows. The diagram's remaind
 Hovering, focusing or clicking a ranking row highlights its graph connection. The graph is a fixed SVG layout, not a force simulation. `wrap` splits long category labels; `fmt` displays one decimal place; `interval` formats the uncertainty range. Percentages are already on a 0–100 scale.
 
 The methodology section uses native `details` elements. Native selects and buttons provide keyboard interaction. On narrow screens, the diagram and full table scroll horizontally instead of shrinking every label; the ranked list fits the viewport. Fonts come from Google Fonts with local fallbacks. UI state is not persisted to storage or encoded in the URL; `#methodology` is only an anchor.
+
+## Branding
+
+The display name is **Who married whom? — Canada**. Keep the header, footer, browser title and documentation consistent. The repository name remains `who-marries-whom`; the local folder and npm package retain their existing names.
+
+The header icon is an inline SVG of interlocking wedding rings in `src/main.tsx`, with a Canadian flag emoji badge. `.marriage-mark` and `.flag-badge` in `src/style.css` control sizing and placement. The badge surrounding is intentionally transparent with no border; the white area inside the flag is part of the flag itself. Emoji appearance depends on the operating system. The decorative mark is hidden from assistive technology, while the home link provides the full accessible name.
+
+`public/favicon.svg` uses a simplified rings-only mark for legibility at small sizes. Update both SVGs deliberately when changing the brand; they are separate assets. Preserve the mobile sizing rules when adjusting the header.
 
 ## Public data contract
 

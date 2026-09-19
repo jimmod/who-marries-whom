@@ -1,4 +1,4 @@
-# Who married who? — Canada
+# Who married whom? — Canada
 
 Explore spouse occupation groups using **real weighted estimates from the 2021 Canadian Census Hierarchical Public Use Microdata File**. This version replaces the earlier synthetic demo.
 
