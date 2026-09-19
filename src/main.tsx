@@ -100,7 +100,7 @@ function App() {
           <details><summary>How are uncertain estimates handled?</summary><p>Approximate 95% ranges use the file’s 16 replicate weights and the user guide’s variance method. Our display policy requires at least 30 sample people per individual combination and a coefficient of variation no greater than one third. “Use caution” means variation exceeds 16.5%. These are this website’s reliability thresholds, not a claim of Statistics Canada approval.</p><p>Combinations failing those checks are pooled when their combined estimate passes. Otherwise their share is not shown. They remain in the denominator, and are never shown as zero. Some reportable combinations can be absent from the largest six, so use the full list for detail. Rounding may also prevent totals from equalling exactly 100%.</p></details>
         </div>
       </section>
-      <footer><span>who married who? <span className="footer-muted">/ Canada</span></span><span>{metadata.attribution}</span></footer>
+      <footer><span>who married who? <span className="footer-muted">/ Canada</span></span><span>{metadata.attribution}<br/>Contains information licensed under the <a href="https://www.statcan.gc.ca/en/terms-conditions/open-licence" target="_blank" rel="noreferrer">Statistics Canada Open Licence</a>.</span></footer>
     </main>
   </>;
 }

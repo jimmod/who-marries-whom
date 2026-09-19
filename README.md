@@ -60,3 +60,9 @@ Default raw-data cache and processing report: `.data-local/` (ignored by Git). P
 [Statistics Canada catalogue 98M0001X2021002](https://www150.statcan.gc.ca/n1/en/catalogue/98M0001X2021002), corrected V2 release of November 8, 2024.
 
 Adapted from Statistics Canada, 2021 Census of Population, Hierarchical Public Use Microdata File, 2021. This does not constitute an endorsement by Statistics Canada of this product.
+
+## Licences
+
+Original project code is licensed under the [MIT License](LICENSE).
+
+Contains information licensed under the [Statistics Canada Open Licence](https://www.statcan.gc.ca/en/terms-conditions/open-licence). Statistics Canada source information and the census-derived data in `src/census-summary.json` remain subject to those terms; the MIT licence for the code does not replace them. The required source and non-endorsement attribution appears above and on the website. Third-party dependencies retain their own licences.
