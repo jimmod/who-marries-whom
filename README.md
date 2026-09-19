@@ -2,6 +2,13 @@
 
 Explore spouse occupation groups using **real weighted estimates from the 2021 Canadian Census Hierarchical Public Use Microdata File**. This version replaces the earlier synthetic demo.
 
+## Documentation for agents and contributors
+
+- [Agent instructions](AGENTS.md): entry point and rules to preserve.
+- [Architecture and code guide](docs/ARCHITECTURE.md): components, data contracts, pipeline, testing, hosting, and extension guidance.
+- [Statistical methodology](docs/METHODOLOGY.md): source, weighting, coverage, and uncertainty.
+- [Detailed occupation data request](docs/DETAILED-OCCUPATION-REQUEST.md): requirements for a future detailed selector.
+
 ## Run locally
 
 Requires Node.js 22.12+ (or a current supported release).
