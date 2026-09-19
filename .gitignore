@@ -2,3 +2,7 @@ node_modules/
 dist/
 *.tsbuildinfo
 .DS_Store
+
+# Raw census archive and internal processing diagnostics
+.data-local/
+__pycache__/

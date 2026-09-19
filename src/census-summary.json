@@ -1,0 +1,1423 @@
+{
+  "metadata": {
+    "status": "real",
+    "year": 2021,
+    "geography": "Canada",
+    "source": "https://www150.statcan.gc.ca/n1/en/catalogue/98M0001X2021002",
+    "download": "https://www150.statcan.gc.ca/n1/pub/98m0001x/2023001/cen21_hier_98M0001X_rec21_hier.zip",
+    "sourceVersion": "Corrected November 8, 2024 (V2)",
+    "archiveSha256": "b6f464b7e77ca27a58cf57080662f7bee3cdf1b9434da341ef5913abd2887042",
+    "generatedAt": "2026-09-19T17:18:14.576388+00:00",
+    "attribution": "Adapted from Statistics Canada, 2021 Census of Population, Hierarchical Public Use Microdata File, 2021. This does not constitute an endorsement by Statistics Canada of this product.",
+    "universe": "Linked co-resident married spouses in private households, with available gender and an applicable, available occupation category for both spouses.",
+    "reliabilityPolicy": "Individual combinations require at least 30 sample people and a coefficient of variation no greater than one third. CV above 16.5% is flagged. These are app-specific display thresholds, not Statistics Canada disclosure rules."
+  },
+  "profiles": [
+    {
+      "id": "1:1",
+      "gender": "Women+",
+      "genderCode": "1",
+      "occupation": "Legislative & senior management",
+      "fullOccupation": "Legislative and senior management occupations",
+      "noc": "0"
+    },
+    {
+      "id": "1:2",
+      "gender": "Women+",
+      "genderCode": "1",
+      "occupation": "Business, finance & administration",
+      "fullOccupation": "Business, finance and administration occupations",
+      "noc": "1"
+    },
+    {
+      "id": "1:3",
+      "gender": "Women+",
+      "genderCode": "1",
+      "occupation": "Natural & applied sciences",
+      "fullOccupation": "Natural and applied sciences and related occupations",
+      "noc": "2"
+    },
+    {
+      "id": "1:4",
+      "gender": "Women+",
+      "genderCode": "1",
+      "occupation": "Health occupations",
+      "fullOccupation": "Health occupations",
+      "noc": "3"
+    },
+    {
+      "id": "1:5",
+      "gender": "Women+",
+      "genderCode": "1",
+      "occupation": "Education, law & social services",
+      "fullOccupation": "Occupations in education, law and social, community and government services",
+      "noc": "4"
+    },
+    {
+      "id": "1:6",
+      "gender": "Women+",
+      "genderCode": "1",
+      "occupation": "Art, culture, recreation & sport",
+      "fullOccupation": "Occupations in art, culture, recreation and sport",
+      "noc": "5"
+    },
+    {
+      "id": "1:7",
+      "gender": "Women+",
+      "genderCode": "1",
+      "occupation": "Sales & service",
+      "fullOccupation": "Sales and service occupations",
+      "noc": "6"
+    },
+    {
+      "id": "1:8",
+      "gender": "Women+",
+      "genderCode": "1",
+      "occupation": "Trades, transport & equipment",
+      "fullOccupation": "Trades, transport and equipment operators and related occupations",
+      "noc": "7"
+    },
+    {
+      "id": "1:9",
+      "gender": "Women+",
+      "genderCode": "1",
+      "occupation": "Natural resources & agriculture",
+      "fullOccupation": "Natural resources, agriculture and related production occupations",
+      "noc": "8"
+    },
+    {
+      "id": "1:10",
+      "gender": "Women+",
+      "genderCode": "1",
+      "occupation": "Manufacturing & utilities",
+      "fullOccupation": "Occupations in manufacturing and utilities",
+      "noc": "9"
+    },
+    {
+      "id": "2:1",
+      "gender": "Men+",
+      "genderCode": "2",
+      "occupation": "Legislative & senior management",
+      "fullOccupation": "Legislative and senior management occupations",
+      "noc": "0"
+    },
+    {
+      "id": "2:2",
+      "gender": "Men+",
+      "genderCode": "2",
+      "occupation": "Business, finance & administration",
+      "fullOccupation": "Business, finance and administration occupations",
+      "noc": "1"
+    },
+    {
+      "id": "2:3",
+      "gender": "Men+",
+      "genderCode": "2",
+      "occupation": "Natural & applied sciences",
+      "fullOccupation": "Natural and applied sciences and related occupations",
+      "noc": "2"
+    },
+    {
+      "id": "2:4",
+      "gender": "Men+",
+      "genderCode": "2",
+      "occupation": "Health occupations",
+      "fullOccupation": "Health occupations",
+      "noc": "3"
+    },
+    {
+      "id": "2:5",
+      "gender": "Men+",
+      "genderCode": "2",
+      "occupation": "Education, law & social services",
+      "fullOccupation": "Occupations in education, law and social, community and government services",
+      "noc": "4"
+    },
+    {
+      "id": "2:6",
+      "gender": "Men+",
+      "genderCode": "2",
+      "occupation": "Art, culture, recreation & sport",
+      "fullOccupation": "Occupations in art, culture, recreation and sport",
+      "noc": "5"
+    },
+    {
+      "id": "2:7",
+      "gender": "Men+",
+      "genderCode": "2",
+      "occupation": "Sales & service",
+      "fullOccupation": "Sales and service occupations",
+      "noc": "6"
+    },
+    {
+      "id": "2:8",
+      "gender": "Men+",
+      "genderCode": "2",
+      "occupation": "Trades, transport & equipment",
+      "fullOccupation": "Trades, transport and equipment operators and related occupations",
+      "noc": "7"
+    },
+    {
+      "id": "2:9",
+      "gender": "Men+",
+      "genderCode": "2",
+      "occupation": "Natural resources & agriculture",
+      "fullOccupation": "Natural resources, agriculture and related production occupations",
+      "noc": "8"
+    },
+    {
+      "id": "2:10",
+      "gender": "Men+",
+      "genderCode": "2",
+      "occupation": "Manufacturing & utilities",
+      "fullOccupation": "Occupations in manufacturing and utilities",
+      "noc": "9"
+    }
+  ],
+  "selections": {
+    "1:1": {
+      "rows": [
+        {
+          "target": "2:1",
+          "percent": 21.34295,
+          "lower": 16.59359,
+          "upper": 26.09231,
+          "quality": "standard"
+        },
+        {
+          "target": "2:2",
+          "percent": 19.479193,
+          "lower": 14.818284,
+          "upper": 24.140101,
+          "quality": "standard"
+        },
+        {
+          "target": "2:8",
+          "percent": 15.362312,
+          "lower": 11.347573,
+          "upper": 19.377051,
+          "quality": "standard"
+        },
+        {
+          "target": "2:7",
+          "percent": 13.485267,
+          "lower": 10.419945,
+          "upper": 16.550588,
+          "quality": "standard"
+        }
+      ],
+      "pooled": {
+        "percent": 30.330279,
+        "lower": 24.8536,
+        "upper": 35.806957,
+        "quality": "standard"
+      },
+      "hasUnreportedRemainder": false,
+      "includedPercent": 83.954994,
+      "linkedPercent": 98.111512
+    },
+    "1:2": {
+      "rows": [
+        {
+          "target": "2:8",
+          "percent": 30.183639,
+          "lower": 29.401876,
+          "upper": 30.965402,
+          "quality": "standard"
+        },
+        {
+          "target": "2:7",
+          "percent": 15.976499,
+          "lower": 15.307686,
+          "upper": 16.645312,
+          "quality": "standard"
+        },
+        {
+          "target": "2:2",
+          "percent": 15.956991,
+          "lower": 15.252921,
+          "upper": 16.661062,
+          "quality": "standard"
+        },
+        {
+          "target": "2:3",
+          "percent": 14.477772,
+          "lower": 13.675575,
+          "upper": 15.27997,
+          "quality": "standard"
+        },
+        {
+          "target": "2:5",
+          "percent": 6.908126,
+          "lower": 6.232347,
+          "upper": 7.583904,
+          "quality": "standard"
+        },
+        {
+          "target": "2:10",
+          "percent": 4.833058,
+          "lower": 4.364291,
+          "upper": 5.301826,
+          "quality": "standard"
+        },
+        {
+          "target": "2:1",
+          "percent": 3.309163,
+          "lower": 3.014524,
+          "upper": 3.603801,
+          "quality": "standard"
+        },
+        {
+          "target": "2:9",
+          "percent": 3.091311,
+          "lower": 2.762492,
+          "upper": 3.420131,
+          "quality": "standard"
+        },
+        {
+          "target": "2:4",
+          "percent": 2.74788,
+          "lower": 2.407686,
+          "upper": 3.088074,
+          "quality": "standard"
+        },
+        {
+          "target": "2:6",
+          "percent": 1.908887,
+          "lower": 1.624312,
+          "upper": 2.193462,
+          "quality": "standard"
+        }
+      ],
+      "pooled": {
+        "percent": 0.606673,
+        "lower": 0.397417,
+        "upper": 0.815929,
+        "quality": "caution"
+      },
+      "hasUnreportedRemainder": false,
+      "includedPercent": 88.896071,
+      "linkedPercent": 98.81325
+    },
+    "1:3": {
+      "rows": [
+        {
+          "target": "2:3",
+          "percent": 44.455972,
+          "lower": 41.315425,
+          "upper": 47.596518,
+          "quality": "standard"
+        },
+        {
+          "target": "2:8",
+          "percent": 14.893964,
+          "lower": 12.593888,
+          "upper": 17.194041,
+          "quality": "standard"
+        },
+        {
+          "target": "2:2",
+          "percent": 12.358403,
+          "lower": 10.38008,
+          "upper": 14.336726,
+          "quality": "standard"
+        },
+        {
+          "target": "2:7",
+          "percent": 8.785921,
+          "lower": 7.326044,
+          "upper": 10.245799,
+          "quality": "standard"
+        },
+        {
+          "target": "2:5",
+          "percent": 7.59177,
+          "lower": 6.099348,
+          "upper": 9.084193,
+          "quality": "standard"
+        },
+        {
+          "target": "2:10",
+          "percent": 3.351691,
+          "lower": 2.24637,
+          "upper": 4.457011,
+          "quality": "standard"
+        },
+        {
+          "target": "2:1",
+          "percent": 2.308184,
+          "lower": 1.602335,
+          "upper": 3.014034,
+          "quality": "standard"
+        },
+        {
+          "target": "2:6",
+          "percent": 2.307083,
+          "lower": 1.380907,
+          "upper": 3.233259,
+          "quality": "caution"
+        }
+      ],
+      "pooled": {
+        "percent": 3.947011,
+        "lower": 2.794102,
+        "upper": 5.099919,
+        "quality": "standard"
+      },
+      "hasUnreportedRemainder": false,
+      "includedPercent": 91.298433,
+      "linkedPercent": 98.301146
+    },
+    "1:4": {
+      "rows": [
+        {
+          "target": "2:8",
+          "percent": 28.265777,
+          "lower": 26.697246,
+          "upper": 29.834308,
+          "quality": "standard"
+        },
+        {
+          "target": "2:3",
+          "percent": 14.6196,
+          "lower": 13.470962,
+          "upper": 15.768238,
+          "quality": "standard"
+        },
+        {
+          "target": "2:7",
+          "percent": 14.033706,
+          "lower": 12.711853,
+          "upper": 15.355559,
+          "quality": "standard"
+        },
+        {
+          "target": "2:4",
+          "percent": 10.911437,
+          "lower": 9.933565,
+          "upper": 11.889308,
+          "quality": "standard"
+        },
+        {
+          "target": "2:2",
+          "percent": 10.642335,
+          "lower": 9.825177,
+          "upper": 11.459493,
+          "quality": "standard"
+        },
+        {
+          "target": "2:5",
+          "percent": 9.542965,
+          "lower": 8.54389,
+          "upper": 10.54204,
+          "quality": "standard"
+        },
+        {
+          "target": "2:10",
+          "percent": 5.418212,
+          "lower": 4.559056,
+          "upper": 6.277369,
+          "quality": "standard"
+        },
+        {
+          "target": "2:9",
+          "percent": 3.124786,
+          "lower": 2.631929,
+          "upper": 3.617643,
+          "quality": "standard"
+        },
+        {
+          "target": "2:1",
+          "percent": 1.464299,
+          "lower": 1.010376,
+          "upper": 1.918223,
+          "quality": "standard"
+        },
+        {
+          "target": "2:6",
+          "percent": 1.391337,
+          "lower": 1.048966,
+          "upper": 1.733708,
+          "quality": "standard"
+        }
+      ],
+      "pooled": null,
+      "hasUnreportedRemainder": true,
+      "includedPercent": 88.204197,
+      "linkedPercent": 97.976868
+    },
+    "1:5": {
+      "rows": [
+        {
+          "target": "2:8",
+          "percent": 24.804426,
+          "lower": 23.983753,
+          "upper": 25.6251,
+          "quality": "standard"
+        },
+        {
+          "target": "2:5",
+          "percent": 18.964123,
+          "lower": 18.032541,
+          "upper": 19.895704,
+          "quality": "standard"
+        },
+        {
+          "target": "2:3",
+          "percent": 15.504799,
+          "lower": 14.387026,
+          "upper": 16.622572,
+          "quality": "standard"
+        },
+        {
+          "target": "2:7",
+          "percent": 13.61028,
+          "lower": 12.620191,
+          "upper": 14.600369,
+          "quality": "standard"
+        },
+        {
+          "target": "2:2",
+          "percent": 12.316239,
+          "lower": 11.419848,
+          "upper": 13.21263,
+          "quality": "standard"
+        },
+        {
+          "target": "2:10",
+          "percent": 3.993277,
+          "lower": 3.439411,
+          "upper": 4.547143,
+          "quality": "standard"
+        },
+        {
+          "target": "2:4",
+          "percent": 2.819099,
+          "lower": 2.442699,
+          "upper": 3.195499,
+          "quality": "standard"
+        },
+        {
+          "target": "2:9",
+          "percent": 2.685976,
+          "lower": 2.325344,
+          "upper": 3.046607,
+          "quality": "standard"
+        },
+        {
+          "target": "2:6",
+          "percent": 2.499795,
+          "lower": 2.084283,
+          "upper": 2.915307,
+          "quality": "standard"
+        },
+        {
+          "target": "2:1",
+          "percent": 2.114097,
+          "lower": 1.722398,
+          "upper": 2.505796,
+          "quality": "standard"
+        }
+      ],
+      "pooled": {
+        "percent": 0.687889,
+        "lower": 0.487185,
+        "upper": 0.888592,
+        "quality": "standard"
+      },
+      "hasUnreportedRemainder": false,
+      "includedPercent": 89.717633,
+      "linkedPercent": 98.56952
+    },
+    "1:6": {
+      "rows": [
+        {
+          "target": "2:8",
+          "percent": 20.660228,
+          "lower": 18.212818,
+          "upper": 23.107639,
+          "quality": "standard"
+        },
+        {
+          "target": "2:3",
+          "percent": 17.37965,
+          "lower": 14.463098,
+          "upper": 20.296201,
+          "quality": "standard"
+        },
+        {
+          "target": "2:7",
+          "percent": 13.069058,
+          "lower": 11.582332,
+          "upper": 14.555784,
+          "quality": "standard"
+        },
+        {
+          "target": "2:2",
+          "percent": 12.835083,
+          "lower": 10.963465,
+          "upper": 14.706702,
+          "quality": "standard"
+        },
+        {
+          "target": "2:5",
+          "percent": 12.134592,
+          "lower": 9.647159,
+          "upper": 14.622026,
+          "quality": "standard"
+        },
+        {
+          "target": "2:6",
+          "percent": 12.133376,
+          "lower": 9.808004,
+          "upper": 14.458748,
+          "quality": "standard"
+        }
+      ],
+      "pooled": {
+        "percent": 11.788012,
+        "lower": 9.164516,
+        "upper": 14.411508,
+        "quality": "standard"
+      },
+      "hasUnreportedRemainder": false,
+      "includedPercent": 87.451912,
+      "linkedPercent": 98.062206
+    },
+    "1:7": {
+      "rows": [
+        {
+          "target": "2:8",
+          "percent": 34.530563,
+          "lower": 33.581273,
+          "upper": 35.479853,
+          "quality": "standard"
+        },
+        {
+          "target": "2:7",
+          "percent": 27.709649,
+          "lower": 26.910364,
+          "upper": 28.508933,
+          "quality": "standard"
+        },
+        {
+          "target": "2:3",
+          "percent": 9.418831,
+          "lower": 8.421081,
+          "upper": 10.41658,
+          "quality": "standard"
+        },
+        {
+          "target": "2:2",
+          "percent": 8.914918,
+          "lower": 8.474331,
+          "upper": 9.355506,
+          "quality": "standard"
+        },
+        {
+          "target": "2:10",
+          "percent": 6.647026,
+          "lower": 5.945212,
+          "upper": 7.348841,
+          "quality": "standard"
+        },
+        {
+          "target": "2:5",
+          "percent": 4.824624,
+          "lower": 4.401344,
+          "upper": 5.247904,
+          "quality": "standard"
+        },
+        {
+          "target": "2:9",
+          "percent": 3.05902,
+          "lower": 2.687266,
+          "upper": 3.430774,
+          "quality": "standard"
+        },
+        {
+          "target": "2:4",
+          "percent": 1.608143,
+          "lower": 1.301285,
+          "upper": 1.915,
+          "quality": "standard"
+        },
+        {
+          "target": "2:6",
+          "percent": 1.464237,
+          "lower": 1.145619,
+          "upper": 1.782854,
+          "quality": "standard"
+        },
+        {
+          "target": "2:1",
+          "percent": 1.148233,
+          "lower": 0.972622,
+          "upper": 1.323844,
+          "quality": "standard"
+        }
+      ],
+      "pooled": {
+        "percent": 0.674756,
+        "lower": 0.478551,
+        "upper": 0.870961,
+        "quality": "standard"
+      },
+      "hasUnreportedRemainder": false,
+      "includedPercent": 84.272826,
+      "linkedPercent": 97.180543
+    },
+    "1:8": {
+      "rows": [
+        {
+          "target": "2:8",
+          "percent": 56.934941,
+          "lower": 54.252163,
+          "upper": 59.617719,
+          "quality": "standard"
+        },
+        {
+          "target": "2:7",
+          "percent": 12.376724,
+          "lower": 10.857723,
+          "upper": 13.895725,
+          "quality": "standard"
+        },
+        {
+          "target": "2:3",
+          "percent": 7.549754,
+          "lower": 6.245108,
+          "upper": 8.854401,
+          "quality": "standard"
+        },
+        {
+          "target": "2:2",
+          "percent": 7.175975,
+          "lower": 5.563995,
+          "upper": 8.787955,
+          "quality": "standard"
+        },
+        {
+          "target": "2:10",
+          "percent": 4.453542,
+          "lower": 2.631591,
+          "upper": 6.275493,
+          "quality": "caution"
+        },
+        {
+          "target": "2:5",
+          "percent": 3.960438,
+          "lower": 2.705684,
+          "upper": 5.215192,
+          "quality": "standard"
+        }
+      ],
+      "pooled": {
+        "percent": 7.548626,
+        "lower": 5.575805,
+        "upper": 9.521448,
+        "quality": "standard"
+      },
+      "hasUnreportedRemainder": false,
+      "includedPercent": 84.43296,
+      "linkedPercent": 96.865281
+    },
+    "1:9": {
+      "rows": [
+        {
+          "target": "2:9",
+          "percent": 69.61498,
+          "lower": 65.605091,
+          "upper": 73.624869,
+          "quality": "standard"
+        },
+        {
+          "target": "2:8",
+          "percent": 14.614371,
+          "lower": 11.11645,
+          "upper": 18.112292,
+          "quality": "standard"
+        }
+      ],
+      "pooled": {
+        "percent": 15.770649,
+        "lower": 12.873416,
+        "upper": 18.667882,
+        "quality": "standard"
+      },
+      "hasUnreportedRemainder": false,
+      "includedPercent": 93.901054,
+      "linkedPercent": 99.347154
+    },
+    "1:10": {
+      "rows": [
+        {
+          "target": "2:8",
+          "percent": 37.505504,
+          "lower": 34.008849,
+          "upper": 41.002158,
+          "quality": "standard"
+        },
+        {
+          "target": "2:10",
+          "percent": 24.846536,
+          "lower": 22.174532,
+          "upper": 27.51854,
+          "quality": "standard"
+        },
+        {
+          "target": "2:7",
+          "percent": 13.988422,
+          "lower": 11.256354,
+          "upper": 16.720489,
+          "quality": "standard"
+        },
+        {
+          "target": "2:3",
+          "percent": 8.183343,
+          "lower": 6.188933,
+          "upper": 10.177752,
+          "quality": "standard"
+        },
+        {
+          "target": "2:2",
+          "percent": 6.846158,
+          "lower": 4.940975,
+          "upper": 8.751341,
+          "quality": "standard"
+        }
+      ],
+      "pooled": {
+        "percent": 8.630038,
+        "lower": 6.729906,
+        "upper": 10.53017,
+        "quality": "standard"
+      },
+      "hasUnreportedRemainder": false,
+      "includedPercent": 82.357038,
+      "linkedPercent": 97.306299
+    },
+    "2:1": {
+      "rows": [
+        {
+          "target": "1:2",
+          "percent": 43.600349,
+          "lower": 40.443063,
+          "upper": 46.757635,
+          "quality": "standard"
+        },
+        {
+          "target": "1:5",
+          "percent": 18.316303,
+          "lower": 15.758543,
+          "upper": 20.874063,
+          "quality": "standard"
+        },
+        {
+          "target": "1:7",
+          "percent": 11.627934,
+          "lower": 9.981446,
+          "upper": 13.274422,
+          "quality": "standard"
+        },
+        {
+          "target": "1:4",
+          "percent": 8.722842,
+          "lower": 6.204946,
+          "upper": 11.240737,
+          "quality": "standard"
+        },
+        {
+          "target": "1:1",
+          "percent": 8.281496,
+          "lower": 6.123468,
+          "upper": 10.439525,
+          "quality": "standard"
+        },
+        {
+          "target": "1:3",
+          "percent": 4.507083,
+          "lower": 3.263804,
+          "upper": 5.750362,
+          "quality": "standard"
+        }
+      ],
+      "pooled": {
+        "percent": 4.943993,
+        "lower": 3.320281,
+        "upper": 6.567705,
+        "quality": "standard"
+      },
+      "hasUnreportedRemainder": false,
+      "includedPercent": 76.02021,
+      "linkedPercent": 98.121368
+    },
+    "2:2": {
+      "rows": [
+        {
+          "target": "1:2",
+          "percent": 38.624291,
+          "lower": 37.26461,
+          "upper": 39.983972,
+          "quality": "standard"
+        },
+        {
+          "target": "1:5",
+          "percent": 19.603278,
+          "lower": 18.333996,
+          "upper": 20.87256,
+          "quality": "standard"
+        },
+        {
+          "target": "1:7",
+          "percent": 16.58546,
+          "lower": 15.780656,
+          "upper": 17.390264,
+          "quality": "standard"
+        },
+        {
+          "target": "1:4",
+          "percent": 11.646696,
+          "lower": 10.777817,
+          "upper": 12.515575,
+          "quality": "standard"
+        },
+        {
+          "target": "1:3",
+          "percent": 4.433279,
+          "lower": 3.621823,
+          "upper": 5.244735,
+          "quality": "standard"
+        },
+        {
+          "target": "1:6",
+          "percent": 2.938528,
+          "lower": 2.44821,
+          "upper": 3.428845,
+          "quality": "standard"
+        },
+        {
+          "target": "1:8",
+          "percent": 1.548917,
+          "lower": 1.182793,
+          "upper": 1.915041,
+          "quality": "standard"
+        },
+        {
+          "target": "1:1",
+          "percent": 1.388555,
+          "lower": 0.993799,
+          "upper": 1.783311,
+          "quality": "standard"
+        },
+        {
+          "target": "1:10",
+          "percent": 1.228581,
+          "lower": 0.90436,
+          "upper": 1.552801,
+          "quality": "standard"
+        }
+      ],
+      "pooled": {
+        "percent": 2.002415,
+        "lower": 1.317873,
+        "upper": 2.686958,
+        "quality": "caution"
+      },
+      "hasUnreportedRemainder": false,
+      "includedPercent": 79.71252,
+      "linkedPercent": 98.382191
+    },
+    "2:3": {
+      "rows": [
+        {
+          "target": "1:2",
+          "percent": 29.777968,
+          "lower": 28.463885,
+          "upper": 31.092052,
+          "quality": "standard"
+        },
+        {
+          "target": "1:5",
+          "percent": 20.970102,
+          "lower": 19.6977,
+          "upper": 22.242505,
+          "quality": "standard"
+        },
+        {
+          "target": "1:7",
+          "percent": 14.889871,
+          "lower": 13.268065,
+          "upper": 16.511677,
+          "quality": "standard"
+        },
+        {
+          "target": "1:4",
+          "percent": 13.595185,
+          "lower": 12.43657,
+          "upper": 14.753799,
+          "quality": "standard"
+        },
+        {
+          "target": "1:3",
+          "percent": 13.551164,
+          "lower": 12.102672,
+          "upper": 14.999657,
+          "quality": "standard"
+        },
+        {
+          "target": "1:6",
+          "percent": 3.381084,
+          "lower": 2.797172,
+          "upper": 3.964995,
+          "quality": "standard"
+        },
+        {
+          "target": "1:8",
+          "percent": 1.384726,
+          "lower": 1.178976,
+          "upper": 1.590476,
+          "quality": "standard"
+        },
+        {
+          "target": "1:10",
+          "percent": 1.247876,
+          "lower": 0.888768,
+          "upper": 1.606984,
+          "quality": "standard"
+        }
+      ],
+      "pooled": {
+        "percent": 1.202024,
+        "lower": 0.88318,
+        "upper": 1.520867,
+        "quality": "standard"
+      },
+      "hasUnreportedRemainder": false,
+      "includedPercent": 77.001639,
+      "linkedPercent": 98.060253
+    },
+    "2:4": {
+      "rows": [
+        {
+          "target": "1:4",
+          "percent": 41.856946,
+          "lower": 39.247957,
+          "upper": 44.465935,
+          "quality": "standard"
+        },
+        {
+          "target": "1:2",
+          "percent": 23.314552,
+          "lower": 21.054167,
+          "upper": 25.574936,
+          "quality": "standard"
+        },
+        {
+          "target": "1:5",
+          "percent": 15.728263,
+          "lower": 14.11264,
+          "upper": 17.343885,
+          "quality": "standard"
+        },
+        {
+          "target": "1:7",
+          "percent": 10.487078,
+          "lower": 8.47976,
+          "upper": 12.494395,
+          "quality": "standard"
+        }
+      ],
+      "pooled": {
+        "percent": 8.613162,
+        "lower": 6.454024,
+        "upper": 10.772299,
+        "quality": "standard"
+      },
+      "hasUnreportedRemainder": false,
+      "includedPercent": 80.367773,
+      "linkedPercent": 97.743416
+    },
+    "2:5": {
+      "rows": [
+        {
+          "target": "1:5",
+          "percent": 40.27245,
+          "lower": 38.879815,
+          "upper": 41.665086,
+          "quality": "standard"
+        },
+        {
+          "target": "1:2",
+          "percent": 22.309736,
+          "lower": 20.799894,
+          "upper": 23.819579,
+          "quality": "standard"
+        },
+        {
+          "target": "1:4",
+          "percent": 13.933937,
+          "lower": 12.446453,
+          "upper": 15.421422,
+          "quality": "standard"
+        },
+        {
+          "target": "1:7",
+          "percent": 11.975628,
+          "lower": 10.852552,
+          "upper": 13.098704,
+          "quality": "standard"
+        },
+        {
+          "target": "1:6",
+          "percent": 3.706645,
+          "lower": 2.865299,
+          "upper": 4.547992,
+          "quality": "standard"
+        },
+        {
+          "target": "1:3",
+          "percent": 3.633544,
+          "lower": 2.737581,
+          "upper": 4.529508,
+          "quality": "standard"
+        },
+        {
+          "target": "1:8",
+          "percent": 1.140552,
+          "lower": 0.800141,
+          "upper": 1.480963,
+          "quality": "standard"
+        }
+      ],
+      "pooled": {
+        "percent": 3.027506,
+        "lower": 2.243821,
+        "upper": 3.811191,
+        "quality": "standard"
+      },
+      "hasUnreportedRemainder": false,
+      "includedPercent": 79.582158,
+      "linkedPercent": 98.581699
+    },
+    "2:6": {
+      "rows": [
+        {
+          "target": "1:2",
+          "percent": 26.657333,
+          "lower": 23.198325,
+          "upper": 30.11634,
+          "quality": "standard"
+        },
+        {
+          "target": "1:5",
+          "percent": 22.955244,
+          "lower": 19.482572,
+          "upper": 26.427917,
+          "quality": "standard"
+        },
+        {
+          "target": "1:6",
+          "percent": 16.026537,
+          "lower": 12.63487,
+          "upper": 19.418203,
+          "quality": "standard"
+        },
+        {
+          "target": "1:7",
+          "percent": 15.716229,
+          "lower": 12.80937,
+          "upper": 18.623088,
+          "quality": "standard"
+        },
+        {
+          "target": "1:4",
+          "percent": 8.784662,
+          "lower": 6.507846,
+          "upper": 11.061478,
+          "quality": "standard"
+        },
+        {
+          "target": "1:3",
+          "percent": 4.774774,
+          "lower": 2.909419,
+          "upper": 6.640129,
+          "quality": "caution"
+        }
+      ],
+      "pooled": {
+        "percent": 5.085222,
+        "lower": 3.541287,
+        "upper": 6.629157,
+        "quality": "standard"
+      },
+      "hasUnreportedRemainder": false,
+      "includedPercent": 78.383432,
+      "linkedPercent": 97.102482
+    },
+    "2:7": {
+      "rows": [
+        {
+          "target": "1:7",
+          "percent": 36.450978,
+          "lower": 35.141159,
+          "upper": 37.760798,
+          "quality": "standard"
+        },
+        {
+          "target": "1:2",
+          "percent": 27.343819,
+          "lower": 26.408609,
+          "upper": 28.279028,
+          "quality": "standard"
+        },
+        {
+          "target": "1:5",
+          "percent": 15.317422,
+          "lower": 14.327003,
+          "upper": 16.307841,
+          "quality": "standard"
+        },
+        {
+          "target": "1:4",
+          "percent": 10.85941,
+          "lower": 9.81483,
+          "upper": 11.903989,
+          "quality": "standard"
+        },
+        {
+          "target": "1:3",
+          "percent": 2.228528,
+          "lower": 1.834311,
+          "upper": 2.622744,
+          "quality": "standard"
+        },
+        {
+          "target": "1:6",
+          "percent": 2.115648,
+          "lower": 1.815416,
+          "upper": 2.415881,
+          "quality": "standard"
+        },
+        {
+          "target": "1:8",
+          "percent": 1.888952,
+          "lower": 1.611803,
+          "upper": 2.166101,
+          "quality": "standard"
+        },
+        {
+          "target": "1:10",
+          "percent": 1.77498,
+          "lower": 1.387634,
+          "upper": 2.162327,
+          "quality": "standard"
+        },
+        {
+          "target": "1:1",
+          "percent": 0.679704,
+          "lower": 0.486926,
+          "upper": 0.872481,
+          "quality": "standard"
+        }
+      ],
+      "pooled": {
+        "percent": 1.340559,
+        "lower": 0.874535,
+        "upper": 1.806583,
+        "quality": "caution"
+      },
+      "hasUnreportedRemainder": false,
+      "includedPercent": 77.289564,
+      "linkedPercent": 97.270523
+    },
+    "2:8": {
+      "rows": [
+        {
+          "target": "1:2",
+          "percent": 30.440046,
+          "lower": 29.503453,
+          "upper": 31.376639,
+          "quality": "standard"
+        },
+        {
+          "target": "1:7",
+          "percent": 26.765662,
+          "lower": 25.898006,
+          "upper": 27.633319,
+          "quality": "standard"
+        },
+        {
+          "target": "1:5",
+          "percent": 16.44917,
+          "lower": 15.735149,
+          "upper": 17.163191,
+          "quality": "standard"
+        },
+        {
+          "target": "1:4",
+          "percent": 12.888161,
+          "lower": 12.257573,
+          "upper": 13.518748,
+          "quality": "standard"
+        },
+        {
+          "target": "1:8",
+          "percent": 5.120239,
+          "lower": 4.65428,
+          "upper": 5.586198,
+          "quality": "standard"
+        },
+        {
+          "target": "1:10",
+          "percent": 2.804245,
+          "lower": 2.450177,
+          "upper": 3.158314,
+          "quality": "standard"
+        },
+        {
+          "target": "1:3",
+          "percent": 2.226062,
+          "lower": 1.922183,
+          "upper": 2.52994,
+          "quality": "standard"
+        },
+        {
+          "target": "1:6",
+          "percent": 1.970745,
+          "lower": 1.762637,
+          "upper": 2.178853,
+          "quality": "standard"
+        },
+        {
+          "target": "1:9",
+          "percent": 0.701346,
+          "lower": 0.500105,
+          "upper": 0.902586,
+          "quality": "standard"
+        },
+        {
+          "target": "1:1",
+          "percent": 0.45626,
+          "lower": 0.336275,
+          "upper": 0.576246,
+          "quality": "standard"
+        }
+      ],
+      "pooled": null,
+      "hasUnreportedRemainder": true,
+      "includedPercent": 75.373241,
+      "linkedPercent": 98.205215
+    },
+    "2:9": {
+      "rows": [
+        {
+          "target": "1:9",
+          "percent": 25.801451,
+          "lower": 22.766328,
+          "upper": 28.836574,
+          "quality": "standard"
+        },
+        {
+          "target": "1:2",
+          "percent": 24.07719,
+          "lower": 21.513763,
+          "upper": 26.640618,
+          "quality": "standard"
+        },
+        {
+          "target": "1:7",
+          "percent": 18.312433,
+          "lower": 16.49028,
+          "upper": 20.134586,
+          "quality": "standard"
+        },
+        {
+          "target": "1:5",
+          "percent": 13.756446,
+          "lower": 12.012162,
+          "upper": 15.50073,
+          "quality": "standard"
+        },
+        {
+          "target": "1:4",
+          "percent": 11.003723,
+          "lower": 9.547429,
+          "upper": 12.460016,
+          "quality": "standard"
+        }
+      ],
+      "pooled": {
+        "percent": 7.048757,
+        "lower": 5.560348,
+        "upper": 8.537166,
+        "quality": "standard"
+      },
+      "hasUnreportedRemainder": false,
+      "includedPercent": 75.816007,
+      "linkedPercent": 98.045906
+    },
+    "2:10": {
+      "rows": [
+        {
+          "target": "1:7",
+          "percent": 27.909236,
+          "lower": 25.017344,
+          "upper": 30.801127,
+          "quality": "standard"
+        },
+        {
+          "target": "1:2",
+          "percent": 26.402312,
+          "lower": 23.88295,
+          "upper": 28.921673,
+          "quality": "standard"
+        },
+        {
+          "target": "1:5",
+          "percent": 14.344667,
+          "lower": 12.458612,
+          "upper": 16.230721,
+          "quality": "standard"
+        },
+        {
+          "target": "1:4",
+          "percent": 13.382346,
+          "lower": 11.09413,
+          "upper": 15.670562,
+          "quality": "standard"
+        },
+        {
+          "target": "1:10",
+          "percent": 10.06313,
+          "lower": 8.52413,
+          "upper": 11.60213,
+          "quality": "standard"
+        },
+        {
+          "target": "1:3",
+          "percent": 2.713545,
+          "lower": 1.908324,
+          "upper": 3.518766,
+          "quality": "standard"
+        },
+        {
+          "target": "1:8",
+          "percent": 2.169517,
+          "lower": 1.303915,
+          "upper": 3.03512,
+          "quality": "caution"
+        }
+      ],
+      "pooled": {
+        "percent": 3.015248,
+        "lower": 2.293936,
+        "upper": 3.736559,
+        "quality": "standard"
+      },
+      "hasUnreportedRemainder": false,
+      "includedPercent": 75.718447,
+      "linkedPercent": 97.399059
+    }
+  }
+}
