@@ -15,12 +15,67 @@ function wrap(text: string, width = 28) {
   return lines;
 }
 
+const occupationDetails: Record<string, { nocCode: string; fullTitle: string; examples: string }> = {
+  '0': {
+    nocCode: 'NOC Broad Category 0',
+    fullTitle: 'Legislative and senior management occupations',
+    examples: 'Legislators, politicians, corporate executives (CEOs, CFOs, VPs), senior government directors, and senior managers in finance, tech, health, education, construction, and retail.',
+  },
+  '1': {
+    nocCode: 'NOC Broad Category 1',
+    fullTitle: 'Business, finance and administration occupations',
+    examples: 'Accountants, financial auditors & analysts, HR professionals, office managers, executive assistants, bookkeepers, payroll administrators, and court clerks.',
+  },
+  '2': {
+    nocCode: 'NOC Broad Category 2',
+    fullTitle: 'Natural and applied sciences and related occupations',
+    examples: 'Software engineers, computer programmers, data scientists, civil/mechanical/electrical engineers, architects, chemists, biologists, physicists, and IT systems analysts.',
+  },
+  '3': {
+    nocCode: 'NOC Broad Category 3',
+    fullTitle: 'Health occupations',
+    examples: 'Physicians (specialists & GPs), registered nurses, nurse practitioners, pharmacists, dentists, veterinarians, physiotherapists, paramedics, and medical laboratory technologists.',
+  },
+  '4': {
+    nocCode: 'NOC Broad Category 4',
+    fullTitle: 'Occupations in education, law and social, community and government services',
+    examples: 'Elementary and secondary school teachers, university professors, college instructors, early childhood educators, lawyers, judges, paralegals, social workers, psychologists, and police officers.',
+  },
+  '5': {
+    nocCode: 'NOC Broad Category 5',
+    fullTitle: 'Occupations in art, culture, recreation and sport',
+    examples: 'Authors, journalists, graphic designers, illustrators, photographers, musicians, actors, producers, dancers, athletes, coaches, sports officials, librarians, and translators.',
+  },
+  '6': {
+    nocCode: 'NOC Broad Category 6',
+    fullTitle: 'Sales and service occupations',
+    examples: 'Retail salespersons, store managers, cashiers, chefs, cooks, food & beverage servers, hotel front desk agents, hairstylists, security guards, flight attendants, and travel agents.',
+  },
+  '7': {
+    nocCode: 'NOC Broad Category 7',
+    fullTitle: 'Trades, transport and equipment operators and related occupations',
+    examples: 'Electricians, plumbers, carpenters, steamfitters, welders, machinists, automotive mechanics, construction trades, long-haul truck drivers, transit/bus drivers, and heavy equipment operators.',
+  },
+  '8': {
+    nocCode: 'NOC Broad Category 8',
+    fullTitle: 'Natural resources, agriculture and related production occupations',
+    examples: 'Farmers, agricultural managers, specialized livestock workers, loggers, forestry professionals, mine workers, oil and gas drillers, commercial fishers, and landscapers.',
+  },
+  '9': {
+    nocCode: 'NOC Broad Category 9',
+    fullTitle: 'Occupations in manufacturing and utilities',
+    examples: 'Machine operators (plastics, chemical, metal, textile), assemblers (automotive, electronics), food & beverage processing workers, water plant operators, and power engineers.',
+  },
+};
+
 function App() {
   const [noc, setNoc] = useState('4');
   const [gender, setGender] = useState('1');
   const [view, setView] = useState<'connections' | 'table'>('connections');
   const [active, setActive] = useState<string | null>(null);
+  const [showDetails, setShowDetails] = useState(false);
   const { profile, selection, rows } = getSelection(gender, noc);
+  const activeDetail = occupationDetails[noc] || occupationDetails['4'];
   const top = rows.slice(0, 6);
   const remainder = rows.slice(6).reduce((sum, r) => sum + r.percent, 0) + (selection.pooled?.percent || 0);
   const graph = [...top.map(r => ({ ...r, subtitle: r.gender })), ...(remainder > 0 ? [{
@@ -45,9 +100,56 @@ function App() {
         <div className="filters">
           <div className="filter-intro"><span className="step">01</span><div><strong>Start with a person</strong><span>Choose a gender and occupation group</span></div></div>
           <label>Gender<select value={gender} onChange={e => {setGender(e.target.value); change();}}><option value="1">Women+</option><option value="2">Men+</option></select></label>
-          <label className="occupation-select">Occupation group<select value={noc} onChange={e => {setNoc(e.target.value); change();}}>{occupations.map(o => <option value={o.noc} key={o.noc}>{o.occupation}</option>)}</select></label>
+          <div className="occupation-field">
+            <div className="field-header">
+              <label htmlFor="occ-select">Occupation group</label>
+              <button
+                type="button"
+                className="what-is-included-btn"
+                onClick={() => setShowDetails(!showDetails)}
+                aria-expanded={showDetails}
+                aria-controls="group-info-drawer"
+              >
+                ⓘ What's included?
+              </button>
+            </div>
+            <select id="occ-select" value={noc} onChange={e => {setNoc(e.target.value); change();}}>
+              {occupations.map(o => <option value={o.noc} key={o.noc}>{o.occupation}</option>)}
+            </select>
+          </div>
           <div className="scope"><span>EXPLORING</span><strong>Married couples</strong><small>Canada-wide · 2021</small></div>
         </div>
+        {showDetails && (
+          <div id="group-info-drawer" className="group-info-drawer" role="region" aria-label="Occupations included in this group">
+            <div className="group-info-inner">
+              <div className="group-info-top">
+                <span className="group-info-tag">{activeDetail.nocCode}</span>
+                <button
+                  type="button"
+                  className="group-info-close"
+                  onClick={() => setShowDetails(false)}
+                  aria-label="Close details"
+                >
+                  ✕ Close
+                </button>
+              </div>
+              <div className="group-info-title">{activeDetail.fullTitle}</div>
+              <p className="group-info-examples">
+                <strong>Common jobs included:</strong> {activeDetail.examples}
+              </p>
+              <div>
+                <a
+                  href="https://noc.esdc.gc.ca/Structure/Hierarchy"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group-info-link"
+                >
+                  Search all job titles in the official NOC 2021 directory ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        )}
         <div className="category-note">Women+ and Men+ each include some non-binary people. A separate non-binary category is not available in this file.</div>
         <div className="results-heading">
           <div aria-live="polite"><div className="eyebrow">FOLLOW THE CONNECTIONS</div><h2>{profile.gender} · <span>{profile.occupation}</span></h2><p>Spouses with a known occupation group and gender.</p></div>
