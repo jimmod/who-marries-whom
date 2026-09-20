@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { getSelection, metadata, occupations, type Estimate } from './data';
 import './style.css';
 
-const colors = ['#24685a', '#468f7c', '#76a79a', '#a4c2a8', '#b4be71', '#b69a65', '#c8ceca'];
+const colors = ['#24685a', '#468f7c', '#76a79a', '#a4c2a8', '#b4be71', '#b69a65', '#8fa093'];
 const fmt = (n: number) => `${n.toFixed(1)}%`;
 const interval = (r: Estimate) => `${fmt(r.lower)}–${fmt(r.upper)}`;
 function wrap(text: string, width = 28) {
@@ -55,8 +55,8 @@ function App() {
         </div>
         {view === 'connections' ? <div className="results-grid">
           <div className="graph-panel">
-            <div className="graph-topline"><span>SELECTED PERSON</span><span>SPOUSE GROUP & GENDER</span></div>
-            <div className="graph-scroll"><svg viewBox="0 0 720 510" role="img" aria-label={`2021 spouse occupation estimates for ${profile.gender}, ${profile.occupation}. Exact values and uncertainty ranges are available in the full list.`}>
+            <div className="graph-topline desktop-chart"><span>SELECTED PERSON</span><span>SPOUSE GROUP & GENDER</span></div>
+            <div className="graph-scroll desktop-chart"><svg viewBox="0 0 720 510" role="img" aria-label={`2021 spouse occupation estimates for ${profile.gender}, ${profile.occupation}. Exact values and uncertainty ranges are available in the full list.`}>
               <defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.8" fill="#d8dfda"/></pattern></defs><rect width="720" height="510" fill="url(#dots)"/>
               {graph.map((r, i) => {
                 const y = graph.length === 1 ? 239 : 45 + i * 410 / (graph.length - 1);
@@ -71,6 +71,92 @@ function App() {
               <text x="137" y="307" textAnchor="middle" className="source-title">{wrap(profile.occupation, 23).map((line, i) => <tspan x="137" dy={i === 0 ? 0 : 20} key={i}>{line}</tspan>)}</text>
               <text x="137" y={329 + (wrap(profile.occupation, 23).length - 1) * 20} textAnchor="middle" className="node-subtitle">{profile.gender}</text>
             </svg></div>
+            {(() => {
+              const mobileFirstCardY = 120;
+              const mobileSlotHeight = 92;
+              const mobileCardHeight = 82;
+              const mobileSvgHeight = mobileFirstCardY + graph.length * mobileSlotHeight + 10;
+              return (
+                <div className="mobile-chart" aria-label="Spouse connections, arranged vertically">
+                  <div className="mobile-chart-inner">
+                    <svg
+                      className="mobile-chart-svg"
+                      viewBox={`0 0 76 ${mobileSvgHeight}`}
+                      style={{ height: mobileSvgHeight }}
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <circle cx="38" cy="38" r="26" fill="#e9efd9" />
+                      <circle cx="38" cy="38" r="19" fill="#173e34" />
+                      <text x="38" y="44" textAnchor="middle" fontSize="16" fill="#d6ee91" fontWeight="bold">◎</text>
+                      {graph.map((r, i) => {
+                        const lane = 48 - (graph.length <= 1 ? 0 : i * (28 / (graph.length - 1)));
+                        const endY = mobileFirstCardY + i * mobileSlotHeight + mobileCardHeight / 2;
+                        const turnDist = Math.min(26, Math.max(16, (76 - lane) * 0.5));
+                        const isHovered = active === r.id;
+                        const isDimmed = active !== null && !isHovered;
+                        return (
+                          <g key={r.id} opacity={isDimmed ? 0.22 : 1} style={{ transition: 'opacity 0.18s ease' }}>
+                            <path
+                              d={`M 38 55 C 38 75, ${lane} 82, ${lane} 106 L ${lane} ${endY - turnDist} C ${lane} ${endY}, ${76 - 12} ${endY}, 76 ${endY}`}
+                              fill="none"
+                              stroke={colors[i]}
+                              strokeOpacity={isHovered ? 0.95 : 0.65}
+                              strokeWidth={Math.max(2.5, Math.min(9, r.percent * 0.42)) + (isHovered ? 1.5 : 0)}
+                              strokeLinecap="round"
+                            />
+                            <circle
+                              cx="73"
+                              cy={endY}
+                              r={isHovered ? 5.5 : 4}
+                              fill={colors[i]}
+                              stroke="#fff"
+                              strokeWidth="2"
+                            />
+                          </g>
+                        );
+                      })}
+                    </svg>
+                    <div className="mobile-chart-content">
+                      <div className="mobile-source-card">
+                        <span className="mobile-chart-label">SELECTED PERSON</span>
+                        <strong className="mobile-source-name">{profile.occupation}</strong>
+                        <span className="mobile-source-gender">{profile.gender}</span>
+                      </div>
+                      <div className="mobile-target-header">
+                        <span className="mobile-chart-label">SPOUSE GROUP &amp; GENDER</span>
+                      </div>
+                      <ol className="mobile-spouse-list">
+                        {graph.map((r, i) => {
+                          const isSelected = active === r.id;
+                          return (
+                            <li key={r.id} style={{ height: mobileSlotHeight }}>
+                              <button
+                                className={`mobile-connection ${isSelected ? 'active' : ''}`}
+                                onClick={() => setActive(isSelected ? null : r.id)}
+                                aria-pressed={isSelected}
+                                style={{
+                                  borderLeftColor: colors[i],
+                                  height: mobileCardHeight,
+                                }}
+                              >
+                                <div className="mobile-connection-info">
+                                  <strong>{r.occupation}</strong>
+                                  <span>{r.subtitle}</span>
+                                </div>
+                                <div className="mobile-connection-percent" style={{ color: colors[i] }}>
+                                  <b>{fmt(r.percent)}</b>
+                                </div>
+                              </button>
+                            </li>
+                          );
+                        })}
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              );
+            })()}
             <div className="graph-foot"><span><i/> Thicker connections represent larger shares</span><span>Up to 6 reportable groups + remainder</span></div>
           </div>
           <aside className="ranking"><div className="ranking-title"><h3>Largest reportable connections</h3><span>2021</span></div><p>Share of included married people</p>

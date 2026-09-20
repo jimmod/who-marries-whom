@@ -67,7 +67,7 @@ The diagram and ranking use the first six reportable rows. The diagram's remaind
 
 Hovering, focusing or clicking a ranking row highlights its graph connection. The graph is a fixed SVG layout, not a force simulation. `wrap` splits long category labels; `fmt` displays one decimal place; `interval` formats the uncertainty range. Percentages are already on a 0–100 scale.
 
-The methodology section uses native `details` elements. Native selects and buttons provide keyboard interaction. On narrow screens, the diagram and full table scroll horizontally instead of shrinking every label; the ranked list fits the viewport. Fonts come from Google Fonts with local fallbacks. UI state is not persisted to storage or encoded in the URL; `#methodology` is only an anchor.
+The methodology section uses native `details` elements. Native selects and buttons provide keyboard interaction. At widths up to 760px, the diagram switches to a top-to-bottom layout: a Selected Person source anchor at the top linking downward to vertically listed spouse cards via a narrow SVG rail of curved, share-weighted connections. Cards support tap/keyboard highlighting using the same `active` state. Each row slot is 92px tall (82px card height); keep SVG endpoint spacing and CSS row height synchronized. The desktop SVG is hidden on mobile, and the mobile view is hidden on desktop. The full table still scrolls horizontally; the mobile diagram and ranked list fit the viewport. Fonts come from Google Fonts with local fallbacks. UI state is not persisted to storage or encoded in the URL; `#methodology` is only an anchor.
 
 ## Branding
 
